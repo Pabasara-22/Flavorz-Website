@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavorz - Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+            padding: 20px;
+        }
+
+        .signup-container {
+            display: flex;
+            width: 100%;
+            max-width: 950px;
+            height: 650px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        /* Left Side - Image Section */
+        .hero-section {
+            flex: 1.1;
+            background: url('images/img3.jpg') center/cover no-repeat;
+            position: relative;
+            padding: 30px;
+        }
+
+        /* Logo in top left of the image */
+        .logo-top-left {
+            width: 70px;
+            height: 70px;
+            background: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e2b3a3;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Right Side - Form Section */
+        .form-section {
+            flex: 0.9;
+            background: linear-gradient(135deg, #e2b3a3 0%, #3d261d 100%);
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-header h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .sub-heading {
+            font-size: 0.9rem;
+            color: #2e2e2e;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box label {
+            display: block;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #d1d1d1;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .terms-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background-color: #d19591;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition:  0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #c07d79;
+        }
+
+        .login-link-text {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            font-size: 0.85rem;
+        }
+
+        .login-link-text a {
+            color: #d4e157;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 850px) {
+            .signup-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .hero-section { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <section class="hero-section">
+           <div class="logo">
+                 <img src="images/logo.jpg" alt="Logo">
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="form-header">
+                <h2>Sign Up</h2>
+                <p class="sub-heading">Create your Account get started</p>
+            </div>
+
+            <form id="signupForm">
+                <div class="input-box">
+                    <label>Full name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter the password" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="comform password" required>
+                </div>
+
+                <div class="terms-row">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Teams & Conditions</label>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+
+            <p class="login-link-text">All ready have an account? <a href="index.html">Login</a></p>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const pass = document.getElementById('password').value;
+            const confirmPass = document.getElementById('confirmPassword').value;
+
+            if (pass !== confirmPass) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            alert("Account created successfully! Redirecting to login...");
+            // Redirect to your login page (index.html)
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

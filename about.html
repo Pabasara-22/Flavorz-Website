@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavorz - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e2b3a3 0%, #3d261d 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            background: linear-gradient(to right, #b07d62, #3b1e11);
+            height: 80px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid rgb(10, 9, 9);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a.active {
+            color: #f9b233;
+            border-color: #f9b233;
+        }
+
+        .order-btn {
+            background-color: #fdb851;
+            color: black;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Staatliches', cursive;
+        }
+
+        /* --- Main Content Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .top-section {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Story Card */
+        .story-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            border-radius: 4px;
+        }
+
+        .story-card h4 {
+            font-family: 'Staatliches', cursive;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .story-card h2 {
+            font-family: 'Staatliches', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .story-card p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: #ddd;
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .signature-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Chef Image Card */
+        .chef-img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Bottom Chef Info Bar */
+        .chef-info-bar {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .chef-name-box h3 {
+            color: #5eead4; /* Mint green color from screenshot */
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .chef-name-box h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .chef-bio p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .top-section, .chef-info-bar {
+                grid-template-columns: 1fr;
+            }
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="Images/logo.jpg" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+           <li><a href="menu.html">Menu</a></li>
+             <li><a href="contact.html">Contact</a></li>
+            <li><a href="service.html">Service</a></li>
+        </ul>
+        <a href="#" class="order-btn">Order Now</a>
+    </nav>
+
+    <div class="container">
+        <div class="top-section">
+            <div class="story-card">
+                <h4>Our Story</h4>
+                <h2>A Passion for Good Food</h2>
+                <p>At Flavorz, we believe food is more than a meal it's an experience. We combine fresh, high-quality ingredients with traditional and modern flavors to create delicious dishes. Whether dining in or ordering online, we ensure a warm and memorable experience for everyone.</p>
+                
+                <div class="signature">John Smith</div>
+                <div class="signature-title">Head Chef</div>
+            </div>
+
+            <div class="chef-img-card">
+                <img src="Images/chef.jpg" alt="Our Head Chef">
+            </div>
+        </div>
+
+        <div class="chef-info-bar">
+            <div class="chef-name-box">
+                <h3>Meet our Chef</h3>
+                <h1>John Smith</h1>
+                <p>Head Chef</p>
+            </div>
+            <div class="chef-bio">
+                <p>Our head chef has over 10 years of experience in the culinary industry. He specializes in both local and international cuisines, creating unique dishes with rich flavors and modern presentation.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavorz - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --nav-gradient: linear-gradient(to right, #b07d62, #3b1e11);
+            --primary-yellow: #f9b233;
+            --text-white: #ffffff;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: var(--text-white);
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation Bar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            background: var(--nav-gradient);
+            height: 85px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid rgb(14, 14, 14);
+            object-fit: cover;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-yellow);
+            border-color: var(--primary-yellow);
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        .order-btn {
+            background-color: #fdb851;
+            color: #1a1a1a;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Staatliches', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #e5a545;
+            transform: scale(1.05);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: calc(100vh - 85px);
+            /* This applies your background image with a dark overlay for readability */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), 
+                        url('Images/img.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-family: 'Staatliches', cursive;
+            font-size: 5.5rem;
+            line-height: 1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-yellow);
+            display: block;
+        }
+
+        .hero-content p {
+            max-width: 550px;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        /* --- Features Bar --- */
+        .features-bar {
+            position: absolute;
+            bottom: 40px;      /* Distance from the bottom of the hero section */
+            left: 50%;         /* Move to middle */
+            transform: translateX(-50%); /* Perfectly center it */
+            
+            width: 85%;
+            max-width: 1100px;
+            background: rgba(240, 240, 240, 0.95); /* Light grey / off-white */
+            padding: 15px;
+            border-radius: 20px; /* Rounded corners like in your screenshot */
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #222;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .feature-item img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 950px) {
+            .hero-content h1 { font-size: 4rem; }
+            .nav-links { display: none; }
+            .features-bar { 
+                flex-wrap: wrap; 
+                gap: 20px; 
+                bottom: 20px;
+                width: 95%;
+            }
+            .feature-item { width: 45%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="Images/logo.jpg" alt="Flavorz Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+           <li><a href="contact.html">Contact</a></li> 
+           <li><a href="service.html">Service</a></li>
+        </ul>
+        <a href="#" class="order-btn">Order Now</a>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Good Food <br> <span>Good Mood</span></h1>
+            <p>Discover the rich and delicious food made with love and the finest ingredients.</p>
+        </div>
+
+        <div class="features-bar">
+            <div class="feature-item">
+                <img src="Images/plate icon.png" alt="Ingredients">
+                Quality Ingredients
+            </div>
+            <div class="feature-item">
+                <img src="Images/chef icon.png" alt="Chef">
+                Expert Chefs
+            </div>
+            <div class="feature-item">
+                <img src="Images/food icon.png" alt="Hygiene">
+                Hygienic Food
+            </div>
+            <div class="feature-item">
+                <img src="Images/delivery icon.png" alt="Delivery">
+                Fast Delivery
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

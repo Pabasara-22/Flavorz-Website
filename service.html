@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavorz - Our Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e2b3a3 0%, #3d261d 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            background: linear-gradient(to right, #b07d62, #3b1e11);
+            height: 80px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid rgb(12, 12, 12);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a.active {
+            color: #f9b233;
+            border-color: #f9b233;
+        }
+
+        .order-btn {
+            background-color: #fdb851;
+            color: black;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Staatliches', cursive;
+        }
+
+        /* --- Online Order Section --- */
+        .online-order {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .online-order h1 {
+            font-family: 'Staatliches', cursive;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .online-order p.subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #eee;
+        }
+
+        .workflow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+        }
+
+        .step i {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            font-family: 'Staatliches', cursive;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .arrow {
+            font-size: 2rem;
+            color: #fdb851;
+        }
+
+        /* --- Why Order With Us Section --- */
+        .features-section {
+            background-color: rgba(61, 38, 29, 0.8);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            font-family: 'Staatliches', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-family: 'Staatliches', cursive;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .workflow { flex-direction: column; gap: 20px; }
+            .arrow { transform: rotate(90deg); }
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="Images/logo.jpg" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="service.html" class="active">Service</a></li>
+        </ul>
+        <a href="#" class="order-btn">Order Now</a>
+    </nav>
+
+    <section class="online-order">
+        <h1>Online Order</h1>
+        <p class="subtitle">Enjoy your favourite food</p>
+        
+        <div class="workflow">
+            <div class="step">
+                <i class="fa-solid fa-mouse-pointer"></i>
+                <h3>Choose Your Food</h3>
+            </div>
+            <div class="arrow">></div>
+            <div class="step">
+                <i class="fa-solid fa-list-check"></i>
+                <h3>Place Your Order</h3>
+            </div>
+            <div class="arrow">></div>
+            <div class="step">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Why Order With Us?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <p>Fast Delivery</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-wallet"></i>
+                <p>Secure Payment</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-certificate"></i>
+                <p>Best Quality</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Live Tracking</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
